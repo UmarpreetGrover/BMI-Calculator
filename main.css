@@ -1,0 +1,14 @@
+.body{
+    background-color: #333333;
+}
+
+.gender-btn {
+    transition: 0.3s ease; /* Smooth transition effect for all properties */
+    margin-bottom: 8px; /* Add spacing between the buttons */
+}
+
+.selected-gender {
+    box-shadow: 0 0 5px 2px #ff00ff; /* A magenta box shadow for highlighting */
+    /* You can customize this class to define the visual you prefer */
+}
+

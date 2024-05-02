@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body class="bg-white flex flex-col items-center p-4 md:p-8 overflow-hidden" style="background-color: #FFD894;">
+    <!-- Main Heading -->
+    <h1 class="text-5xl md:text-5xl mb-0 text-center text-lg font-bold text-red-600 rounded-lg" style="background-color: black;">
+        BMI Calculator 
+    </h1>
+    
+    <!-- Secondary Heading -->
+    <h2 class="mb-8 text-center text-lg md:text-2xl font-bold text-red-600 shadow-lg p-3 rounded-lg" style="background-color: black;">
+        Nourish your body, exercise your mind, cherish your relationships, and invest in self-care for lasting prosperity.
+    </h2>
+    
+    <!-- Flex Container for Inputs -->
+    <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-24 mt-8">
+        <!-- Height Input -->
+        <div class="relative group overflow-hidden p-8 rounded-xl border border-gray-200 text-black animate__animated animate__fadeInLeft"
+            style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #94FFD8;">
+            <h3 class="text-black font-bold mb-2">Enter Height</h3>
+            <input type="number" id="heightInput" placeholder="Enter Height in cm" class="text-black p-2 rounded-lg w-full">
+        </div>
+
+        <!-- Gender Selection -->
+        <div class="relative group overflow-hidden p-8 rounded-xl border border-gray-200 text-white"
+            style="background-color: #94FFD8; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <h3 class="text-black font-bold mb-2">Choose Gender</h3>
+            <div class="flex flex-col space-y-4">
+                <button id="maleBtn" class="gender-btn rounded-lg border-2 border-black bg-blue-400" type="button"
+                    onclick="selectGender('male')">Male</button>
+                <button id="femaleBtn" class="gender-btn rounded-lg border-2 border-black bg-pink-400" type="button"
+                    onclick="selectGender('female')">Female</button>
+            </div>
+        </div>
+
+        <!-- Weight Input -->
+        <div class="relative group overflow-hidden p-8 rounded-xl border border-gray-200 text-black animate__animated animate__fadeInRight"
+            style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #94FFD8;">
+            <h3 class="text-black font-bold mb-2">Enter Weight</h3>
+            <input type="number" id="weightInput" placeholder="Enter Weight in kg" class="text-black p-2 rounded-lg w-full">
+        </div>
+    </div>
+
+    <!-- Result Container -->
+    <div class="result-container mt-8 mx-auto p-4 rounded-xl shadow text-center bg-gradient-to-b from-#94FFD8 to-#5AFFE9 animate__animated animate__fadeInUp"
+        style="width: 100%; max-width: 320px; height: 300px; border-radius: 30px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #94FFD8; display: flex; flex-direction: column; align-items: center; justify-content: space-between; overflow: hidden;">
+        <!-- User Input -->
+        <div id="userInput" class="text-black font-bold mb-2"></div>
+
+        <!-- BMI Result -->
+        <div id="bmiResult" class="bg-gray-800 text-white p-4 rounded-lg w-full" style="height: 60%; margin-top: 30px; overflow-y: auto;"></div>
+
+        <!-- Calculate Button -->
+        <div class="w-full text-center mt-4">
+            <button id="calculateButton" class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05]">
+                <span class="w-full h-full absolute bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05]"></span>
+                <span class="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                    <span class="relative text-white">Calculate</span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
